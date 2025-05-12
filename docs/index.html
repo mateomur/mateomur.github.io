@@ -1,71 +1,362 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-  <title>Mateo Murcia - Científico de Datos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mateo Murcia - Científico de datos y Estadístico.">
+  <title>Mateo Murcia | Data Scientist & Statistician</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
   <style>
+    :root {
+      --primary: #2D7DD2;
+      --secondary: #97CC04;
+      --dark: #1F1F1F;
+      --light: #F4F4F9;
+      --accent: #9966FF;
+    }
+
     body {
-      background-color: #1c1c1c;
+      font-family: 'Poppins', sans-serif;
+      color: var(--light);
+      background-color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    .bg-gradient {
+      background: linear-gradient(140deg, var(--dark) 0%, #2c2440 100%);
+    }
+
+    .text-primary-custom { color: var(--primary); }
+    .btn-primary-custom {
+      background-color: var(--accent);
       color: white;
-      font-family: Arial, sans-serif;
+      border: none;
+    }
+    .btn-primary-custom:hover {
+      background-color: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
     }
 
-    h1, h2 {
-      margin-bottom: 20px;
+    .navbar { padding: 20px 0; }
+    .navbar-brand { font-weight: bold; font-size: 1.8rem; color: var(--light); }
+
+    .section { padding: 80px 0; }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
     }
 
-    .btn-custom {
-      width: 80%;
-      padding: 12px;
-      font-weight: bold;
-      margin-bottom: 15px;
+    .skill-logo {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      margin-right: 10px;
+      vertical-align: middle;
     }
 
-    .section {
-      padding: 40px 0;
+    .skill-label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
     }
 
-    .cv-download {
-      margin-top: 30px;
+    .progress {
+      height: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      margin-bottom: 25px;
+    }
+
+    .progress-bar {
+      background-color: var(--accent);
     }
   </style>
 </head>
-
 <body>
-  <div class="container text-center section">
-    <h1>Mateo Murcia</h1>
-    <h2>Científico de Datos - Estadístico</h2>
-    <p>Apasionado por la analítica, el aprendizaje continuo y el uso de datos para resolver problemas reales.</p>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">MM<span class="text-primary-custom">.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Sobre Mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
 
-  <div class="container text-center section">
-    <h3>Habilidades</h3>
-    <p>Python | R | SQL | Power BI | Inglés C1</p>
-    <p>Estadística aplicada | Modelado | Muestreo | Machine Learning</p>
+<!-- Hero Section -->
+<section id="home" class="bg-gradient text-white text-center py-5" style="min-height: 100vh; display: flex; align-items: center;">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Mateo Murcia<span class="text-primary-custom">.</span></h1>
+    <p class="fs-4">Científico de Datos | Analista de Datos | Estadístico</p>
+    <p class="lead mb-4">Transformando datos en decisiones estratégicas.</p>
+    <a href="#contact" class="btn btn-primary-custom px-4 me-2">Contáctame</a>
+    <a href="assets/cv_mateo_murcia.pdf" class="btn btn-outline-light px-4"><i class="fas fa-download me-2"></i>Descargar CV</a>
   </div>
+</section>
 
-  <div class="container text-center section">
-    <h3>Enlaces</h3>
-    <button onclick="location.href='https://platzi.com'" class="btn btn-outline-light btn-custom">Platzi</button>
-    <button onclick="location.href='mailto:mmurciav@unal.edu.co'" class="btn btn-outline-light btn-custom">Contáctame</button>
-    <button onclick="location.href='https://www.linkedin.com/in/TU_USUARIO_LINKEDIN'" class="btn btn-outline-light btn-custom">Mi LinkedIn</button>
-    <!-- Agrega más si tienes -->
+<!-- Sobre Mí -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title text-white text-center">Sobre Mí</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Soy estudiante de último semestre de Estadística en la Universidad Nacional de Colombia sede Medellín y actualmente curso una especialización en Analítica. Tengo una formación sólida en análisis de datos, modelado estadístico, muestreo y programación en R, Python, SAS y Power BI.</p>
+        <p>Me motiva aplicar el conocimiento analítico y las herramientas de machine learning para resolver retos reales que impacten positivamente a las personas y organizaciones.</p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          <li><i class="fas fa-envelope me-2 text-primary-custom"></i> mmurciav@unal.edu.co</li>
+          <li><i class="fas fa-phone me-2 text-primary-custom"></i> +57 3115777402</li>
+          <li><i class="fas fa-map-marker-alt me-2 text-primary-custom"></i> Medellín, Colombia</li>
+          <li><i class="fas fa-globe me-2 text-primary-custom"></i> Español (Nativo), Inglés (C1)</li>
+        </ul>
+        <div class="mt-3">
+          <a href="https://www.linkedin.com/in/mateo-murcia-27a816261/" target="_blank" class="me-3"><i class="fab fa-linkedin fa-2x text-white"></i></a>
+          <a href="https://github.com/mateomur" target="_blank" class="me-3"><i class="fab fa-github fa-2x text-white"></i></a>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="container text-center cv-download">
-    <a href="assets/cv_mateo_murcia.pdf" class="btn btn-success">Descargar CV</a>
+<!-- Habilidades -->
+<section id="skills" class="section bg-gradient text-white">
+  <div class="container">
+    <h2 class="section-title text-center">Mis Habilidades</h2>
+    <div class="row">
+
+      <!-- Programación -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="p-4 border rounded bg-dark h-100">
+          <h4 class="mb-3">Programación</h4>
+          
+          <div class="skill-label">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-logo" alt="Python"> Python
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+          
+          <div class="skill-label">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" class="skill-logo" alt="R"> R
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+          
+          <div class="skill-label">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-logo" alt="SQL"> SQL
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+        </div>
+      </div>
+
+      <!-- Análisis de Datos -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="p-4 border rounded bg-dark h-100">
+          <h4 class="mb-3">Análisis de Datos</h4>
+          
+          <div class="skill-label">
+            <i class="fas fa-chart-area me-2"></i> Estadística Aplicada
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+          
+          <div class="skill-label">
+            <i class="fas fa-eye me-2"></i> Visualización de Datos
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+          
+          <div class="skill-label">
+            <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="skill-logo" alt="Power BI"> Power BI
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+        </div>
+      </div>
+
+      <!-- Machine Learning -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="p-4 border rounded bg-dark h-100">
+          <h4 class="mb-3">Machine Learning</h4>
+          
+          <div class="skill-label">
+            <i class="fas fa-brain me-2"></i> Modelado Estadístico
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+          
+          <div class="skill-label">
+            <i class="fas fa-robot me-2"></i> Aprendizaje Supervisado
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+          
+          <div class="skill-label">
+            <i class="fas fa-database me-2"></i> Business Intelligence
+          </div>
+          <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+        </div>
+      </div>
+
+    </div>
   </div>
+</section>
 
-  <div class="text-center section">
-    <small>© 2025 - Mateo Murcia</small>
+<!-- Experiencia y Formación -->
+<section id="experience" class="section text-white">
+  <div class="container">
+    <div class="row">
+      <!-- Experiencia -->
+      <div class="col-md-6 mb-4">
+        <h2 class="section-title">Experiencia</h2>
+        <div class="mb-4">
+          <h5 class="fw-bold">Tutor de Inglés</h5>
+          <p class="text-primary-custom mb-1">2018 - 2024</p>
+          <p>Diseñé y ejecuté clases personalizadas, 
+            utilizando técnicas interactivas y herramientas digitales para enseñar inglés a estudiantes de distintos niveles y edades.</p>
+        </div>
+      </div>
+      <!-- Formación -->
+      <div class="col-md-6 mb-4">
+        <h2 class="section-title">Formación Complementaria</h2>
+        <div class="mb-4">
+          <h5 class="fw-bold">Cursos Online - Platzi & Datacamp</h5>
+          <p>Formación constante en ciencia de datos, estadística avanzada y herramientas de analítica.</p>
+        </div>
+        <div class="mb-4">
+          <h5 class="fw-bold">Especialización en Analítica</h5>
+          <p>Actualmente cursando una especialización enfocada en técnicas avanzadas de análisis de datos y 
+            Business Intelligence en la Facultad de Minas de la Universidad Nacional de Colombia.</p>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-</body>
+<!-- Proyectos Destacados -->
+<section id="projects" class="section bg-gradient text-white">
+  <div class="container">
+    <h2 class="section-title text-center">Proyectos Destacados</h2>
+    <div class="row">
 
-</html>
+      <!-- Proyecto 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 border rounded bg-dark h-100">
+          <h5 class="fw-bold"><i class="fas fa-chart-line me-2"></i> Análisis Predictivo</h5>
+          <p>Modelos de machine learning para predecir comportamiento del consumidor en retail.</p>
+          <span class="badge bg-primary me-1">Python</span>
+          <span class="badge bg-primary me-1">Scikit-learn</span>
+          <span class="badge bg-primary me-1">Pandas</span>
+          <div class="mt-3">
+            <a href="https://github.com/mateomur" target="_blank" class="btn btn-sm btn-outline-light">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 border rounded bg-dark h-100">
+          <h5 class="fw-bold"><i class="fas fa-desktop me-2"></i> Dashboard de Ventas</h5>
+          <p>Dashboard interactivo con KPIs de rendimiento comercial en Power BI.</p>
+          <span class="badge bg-primary me-1">Power BI</span>
+          <span class="badge bg-primary me-1">SQL</span>
+          <span class="badge bg-primary me-1">DAX</span>
+          <div class="mt-3">
+            <a href="https://github.com/mateomur" target="_blank" class="btn btn-sm btn-outline-light">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 border rounded bg-dark h-100">
+          <h5 class="fw-bold"><i class="fas fa-robot me-2"></i> Segmentación con IA</h5>
+          <p>Optimización de procesos de segmentación de clientes usando clustering e IA.</p>
+          <span class="badge bg-primary me-1">TensorFlow</span>
+          <span class="badge bg-primary me-1">Clustering</span>
+          <span class="badge bg-primary me-1">Python</span>
+          <div class="mt-3">
+            <a href="https://github.com/mateomur" target="_blank" class="btn btn-sm btn-outline-light">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Contacto -->
+<section id="contact" class="section text-white">
+  <div class="container">
+    <h2 class="section-title text-center">Trabajemos Juntos</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control bg-dark text-white border-0" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control bg-dark text-white border-0" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control bg-dark text-white border-0" id="message" rows="5" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary-custom px-4 py-2">Enviar Mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-2">© 2025 Mateo Murcia | Científico de Datos & Estadístico</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/mateo-murcia-27a816261/" target="_blank" class="me-3 text-white">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a href="https://github.com/mateomur" target="_blank" class="me-3 text-white">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a href="mailto:mmurciav@unal.edu.co" class="text-white">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Navbar transparente al principio
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('bg-dark', 'shadow');
+    } else {
+      navbar.classList.remove('bg-dark', 'shadow');
+    }
+  });
+</script>
+
+  </body>
+  </html>
